@@ -13,6 +13,7 @@ AREA .  .ABS.
 		s__HEADER	0000
 		l__XSEG	0000
 		.init	0000
+		rand	0000
 		l__OVERLAY	0000
 		l__LIT	0000
 		s__SFR	0000
@@ -23,14 +24,14 @@ AREA .  .ABS.
 		l__HEADER	01E1
 		s__CODE	0200
 		l__DATA	0249
-		l__CODE	031D
-		s__HOME	051D
-		s__BASE	06C9
-		s__LIT	086C
-		s__GSINIT	086C
+		l__CODE	03BE
+		s__HOME	05BE
+		s__BASE	076A
+		s__LIT	090D
+		s__GSINIT	090D
 		l__GSINIT	0D55
-		s__GSINITTAIL	15C1
-		s__GSFINAL	15C2
+		s__GSINITTAIL	1662
+		s__GSFINAL	1663
 		.OAM	C000
 		s__DATA	C0A0
 		s__BSS	C2E9
@@ -45,14 +46,14 @@ AREA .  .ABS.
 AREA _CODE
 	RADIX HEX
 	BASE 0200
-	SIZE 031D
+	SIZE 03BE
 	ATTRIB REL CON
 	GLOBALS
 		_performantdelay	0200
 		_movegamecharacter	0214
 		_setupPickle	029E
 		_setupFrog	0331
-		_main	03C4
+		_main	03D9
 AREA _HEADER
 	RADIX HEX
 	BASE 0000
@@ -62,96 +63,96 @@ AREA _HEADER
 		_exit	01D2
 AREA _HOME
 	RADIX HEX
-	BASE 051D
+	BASE 05BE
 	SIZE 01AC
 	ATTRIB REL CON
 	GLOBALS
-		.set_mode	051D
-		.remove_VBL	052D
-		.remove_LCD	0533
-		.remove_TIM	0539
-		.remove_SIO	053F
-		.remove_JOY	0545
-		.add_VBL	054B
-		.add_LCD	0551
-		.add_TIM	0557
-		.add_SIO	055D
-		.add_JOY	0563
-		.remove_int	0569
-		.add_int	0589
-		.wait_vbl_done	05A5
-		_wait_vbl_done	05A5
-		_display_off	05BC
-		.display_off	05BC
-		.serial_IO	05DD
-		_mode	060C
-		_get_mode	0615
-		_enable_interrupts	061A
-		_disable_interrupts	061C
-		_reset	061E
-		.reset	061E
-		_set_interrupts	0624
-		_remove_VBL	062F
-		_remove_LCD	063A
-		_remove_TIM	0645
-		_remove_SIO	0650
-		_remove_JOY	065B
-		_add_VBL	0666
-		_add_LCD	0671
-		_add_TIM	067C
-		_add_SIO	0687
-		_add_JOY	0692
-		_clock	069D
-		__printTStates	06A6
-		banked_call	06A7
-		banked_ret	06C0
+		.set_mode	05BE
+		.remove_VBL	05CE
+		.remove_LCD	05D4
+		.remove_TIM	05DA
+		.remove_SIO	05E0
+		.remove_JOY	05E6
+		.add_VBL	05EC
+		.add_LCD	05F2
+		.add_TIM	05F8
+		.add_SIO	05FE
+		.add_JOY	0604
+		.remove_int	060A
+		.add_int	062A
+		.wait_vbl_done	0646
+		_wait_vbl_done	0646
+		_display_off	065D
+		.display_off	065D
+		.serial_IO	067E
+		_mode	06AD
+		_get_mode	06B6
+		_enable_interrupts	06BB
+		_disable_interrupts	06BD
+		_reset	06BF
+		.reset	06BF
+		_set_interrupts	06C5
+		_remove_VBL	06D0
+		_remove_LCD	06DB
+		_remove_TIM	06E6
+		_remove_SIO	06F1
+		_remove_JOY	06FC
+		_add_VBL	0707
+		_add_LCD	0712
+		_add_TIM	071D
+		_add_SIO	0728
+		_add_JOY	0733
+		_clock	073E
+		__printTStates	0747
+		banked_call	0748
+		banked_ret	0761
 AREA _BASE
 	RADIX HEX
-	BASE 06C9
+	BASE 076A
 	SIZE 01A3
 	ATTRIB REL CON
 	GLOBALS
-		.mv_sprite	06C9
-		_move_sprite	06D8
-		_set_win_data	06E5
-		_set_bkg_data	06E5
-		_set_sprite_data	0732
-		.padup	0761
-		_waitpadup	0761
-		.jpad	0771
-		.wait_pad	079E
-		_joypad	07A5
-		_waitpad	07AA
-		.set_sprite_tile	07B4
-		_set_sprite_tile	07C1
-		.copy_vram	07CC
-		_get_data	07DB
-		_set_data	07DB
-		_set_bkg_tiles	07EE
-		.set_xy_wtt	0802
-		.set_xy_btt	0813
-		.set_xy_tt	0822
-		_set_tiles	0853
+		.mv_sprite	076A
+		_move_sprite	0779
+		_set_win_data	0786
+		_set_bkg_data	0786
+		_set_sprite_data	07D3
+		.padup	0802
+		_waitpadup	0802
+		.jpad	0812
+		.wait_pad	083F
+		_joypad	0846
+		_waitpad	084B
+		.set_sprite_tile	0855
+		_set_sprite_tile	0862
+		.copy_vram	086D
+		_get_data	087C
+		_set_data	087C
+		_set_bkg_tiles	088F
+		.set_xy_wtt	08A3
+		.set_xy_btt	08B4
+		.set_xy_tt	08C3
+		_set_tiles	08F4
 AREA _LIT
 	RADIX HEX
-	BASE 086C
+	BASE 090D
 	SIZE 0000
 	ATTRIB REL CON
 AREA _GSINIT
 	RADIX HEX
-	BASE 086C
+	BASE 090D
 	SIZE 0D55
 	ATTRIB REL CON
 	GLOBALS
-		gsinit	086C
+		gsinit	090D
 AREA _GSINITTAIL
 	RADIX HEX
-	BASE 15C1
+	BASE 1662
 	SIZE 0001
 	ATTRIB REL CON
 AREA _GSFINAL
 	RADIX HEX
-	BASE 15C2
+	BASE 1663
 	SIZE 0000
 	ATTRIB REL CON
 AREA _DATA
@@ -280,7 +281,7 @@ MODULES
 	FILE D:\gbdk\lib/small/asxxxx/gb/crt0.o
 		NAME Runtime
 	FILE main.o
-		NAME lcc1495120
+		NAME lcc1478080
 LIBRARIES
 	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE sfr.o
@@ -307,3 +308,5 @@ USERGLOBALDEF
 	.STACK=0xE000
 	.refresh_OAM=0xFF80
 	.init=0x0000
+
+?ASlink-Warning-Undefined Global rand referenced by module lcc1478080

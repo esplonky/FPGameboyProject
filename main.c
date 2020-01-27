@@ -1,5 +1,6 @@
 #include <stdio.h>
 // @ts-ignore
+#include <stdlib.h>
 #include <gb/gb.h>
 #include "sprites.c"
 #include "bgs.c"
@@ -15,6 +16,8 @@ void performantdelay(UINT8 numloops){
         wait_vbl_done();
     }
 }
+
+
 
 void movegamecharacter(struct GameCharacter* character, UINT8 x, UINT8 y){
     move_sprite(character->spritids[0], x, y);
@@ -43,7 +46,9 @@ void setupPickle(){
 
 
 void setupFrog(){
-frogChar.x = 30;
+
+
+frogChar.x = rand();
 frogChar.y = 30;
 frogChar.width = 16;
 frogChar.height = 16;
@@ -87,8 +92,16 @@ void main(){
                     pickleChar.y += 2;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
                 }
-                    performantdelay(2);
+                movegamecharacter(&frogChar, frogChar.x, frogChar.y); 
 
+                if(pickleChar.x >= frogChar.x){
+                    frogChar.x += 5;
+                }
+                if(pickleChar.x >= frogChar.x){
+                    frogChar.x -= 5;
+                }
+                frogChar.y += 3;
+                performantdelay(2);
             }   
 
                
