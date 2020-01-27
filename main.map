@@ -13,7 +13,6 @@ AREA .  .ABS.
 		s__HEADER	0000
 		l__XSEG	0000
 		.init	0000
-		rand	0000
 		l__OVERLAY	0000
 		l__LIT	0000
 		s__SFR	0000
@@ -24,14 +23,14 @@ AREA .  .ABS.
 		l__HEADER	01E1
 		s__CODE	0200
 		l__DATA	0249
-		l__CODE	03BE
-		s__HOME	05BE
-		s__BASE	076A
-		s__LIT	090D
-		s__GSINIT	090D
+		l__CODE	03AC
+		s__HOME	05AC
+		s__BASE	0758
+		s__LIT	08FB
+		s__GSINIT	08FB
 		l__GSINIT	0D55
-		s__GSINITTAIL	1662
-		s__GSFINAL	1663
+		s__GSINITTAIL	1650
+		s__GSFINAL	1651
 		.OAM	C000
 		s__DATA	C0A0
 		s__BSS	C2E9
@@ -46,14 +45,14 @@ AREA .  .ABS.
 AREA _CODE
 	RADIX HEX
 	BASE 0200
-	SIZE 03BE
+	SIZE 03AC
 	ATTRIB REL CON
 	GLOBALS
 		_performantdelay	0200
 		_movegamecharacter	0214
 		_setupPickle	029E
 		_setupFrog	0331
-		_main	03D9
+		_main	03C4
 AREA _HEADER
 	RADIX HEX
 	BASE 0000
@@ -63,96 +62,96 @@ AREA _HEADER
 		_exit	01D2
 AREA _HOME
 	RADIX HEX
-	BASE 05BE
+	BASE 05AC
 	SIZE 01AC
 	ATTRIB REL CON
 	GLOBALS
-		.set_mode	05BE
-		.remove_VBL	05CE
-		.remove_LCD	05D4
-		.remove_TIM	05DA
-		.remove_SIO	05E0
-		.remove_JOY	05E6
-		.add_VBL	05EC
-		.add_LCD	05F2
-		.add_TIM	05F8
-		.add_SIO	05FE
-		.add_JOY	0604
-		.remove_int	060A
-		.add_int	062A
-		.wait_vbl_done	0646
-		_wait_vbl_done	0646
-		_display_off	065D
-		.display_off	065D
-		.serial_IO	067E
-		_mode	06AD
-		_get_mode	06B6
-		_enable_interrupts	06BB
-		_disable_interrupts	06BD
-		_reset	06BF
-		.reset	06BF
-		_set_interrupts	06C5
-		_remove_VBL	06D0
-		_remove_LCD	06DB
-		_remove_TIM	06E6
-		_remove_SIO	06F1
-		_remove_JOY	06FC
-		_add_VBL	0707
-		_add_LCD	0712
-		_add_TIM	071D
-		_add_SIO	0728
-		_add_JOY	0733
-		_clock	073E
-		__printTStates	0747
-		banked_call	0748
-		banked_ret	0761
+		.set_mode	05AC
+		.remove_VBL	05BC
+		.remove_LCD	05C2
+		.remove_TIM	05C8
+		.remove_SIO	05CE
+		.remove_JOY	05D4
+		.add_VBL	05DA
+		.add_LCD	05E0
+		.add_TIM	05E6
+		.add_SIO	05EC
+		.add_JOY	05F2
+		.remove_int	05F8
+		.add_int	0618
+		.wait_vbl_done	0634
+		_wait_vbl_done	0634
+		_display_off	064B
+		.display_off	064B
+		.serial_IO	066C
+		_mode	069B
+		_get_mode	06A4
+		_enable_interrupts	06A9
+		_disable_interrupts	06AB
+		_reset	06AD
+		.reset	06AD
+		_set_interrupts	06B3
+		_remove_VBL	06BE
+		_remove_LCD	06C9
+		_remove_TIM	06D4
+		_remove_SIO	06DF
+		_remove_JOY	06EA
+		_add_VBL	06F5
+		_add_LCD	0700
+		_add_TIM	070B
+		_add_SIO	0716
+		_add_JOY	0721
+		_clock	072C
+		__printTStates	0735
+		banked_call	0736
+		banked_ret	074F
 AREA _BASE
 	RADIX HEX
-	BASE 076A
+	BASE 0758
 	SIZE 01A3
 	ATTRIB REL CON
 	GLOBALS
-		.mv_sprite	076A
-		_move_sprite	0779
-		_set_win_data	0786
-		_set_bkg_data	0786
-		_set_sprite_data	07D3
-		.padup	0802
-		_waitpadup	0802
-		.jpad	0812
-		.wait_pad	083F
-		_joypad	0846
-		_waitpad	084B
-		.set_sprite_tile	0855
-		_set_sprite_tile	0862
-		.copy_vram	086D
-		_get_data	087C
-		_set_data	087C
-		_set_bkg_tiles	088F
-		.set_xy_wtt	08A3
-		.set_xy_btt	08B4
-		.set_xy_tt	08C3
-		_set_tiles	08F4
+		.mv_sprite	0758
+		_move_sprite	0767
+		_set_win_data	0774
+		_set_bkg_data	0774
+		_set_sprite_data	07C1
+		.padup	07F0
+		_waitpadup	07F0
+		.jpad	0800
+		.wait_pad	082D
+		_joypad	0834
+		_waitpad	0839
+		.set_sprite_tile	0843
+		_set_sprite_tile	0850
+		.copy_vram	085B
+		_get_data	086A
+		_set_data	086A
+		_set_bkg_tiles	087D
+		.set_xy_wtt	0891
+		.set_xy_btt	08A2
+		.set_xy_tt	08B1
+		_set_tiles	08E2
 AREA _LIT
 	RADIX HEX
-	BASE 090D
+	BASE 08FB
 	SIZE 0000
 	ATTRIB REL CON
 AREA _GSINIT
 	RADIX HEX
-	BASE 090D
+	BASE 08FB
 	SIZE 0D55
 	ATTRIB REL CON
 	GLOBALS
-		gsinit	090D
+		gsinit	08FB
 AREA _GSINITTAIL
 	RADIX HEX
-	BASE 1662
+	BASE 1650
 	SIZE 0001
 	ATTRIB REL CON
 AREA _GSFINAL
 	RADIX HEX
-	BASE 1663
+	BASE 1651
 	SIZE 0000
 	ATTRIB REL CON
 AREA _DATA
@@ -161,8 +160,7 @@ AREA _DATA
 	SIZE 0249
 	ATTRIB REL CON
 	GLOBALS
-		_pickle	C0A0
-		_frog	C0E0
+		_gameSprites	C0A0
 		_missile	C120
 		_bgTiles	C130
 		_playfield	C170
@@ -278,26 +276,26 @@ AREA _SFR
 		_SVBK_REG	FF70
 		_IE_REG	FFFF
 MODULES
-	FILE D:\gbdk\lib/small/asxxxx/gb/crt0.o
+	FILE C:\gbdk\lib/small/asxxxx/gb/crt0.o
 		NAME Runtime
 	FILE main.o
-		NAME lcc1478080
+		NAME lcc93840
 LIBRARIES
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE sfr.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE mv_spr.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE set_data.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE pad.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE set_spr.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE cpy_data.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE set_bk_t.o
-	LIBRARY D:\gbdk\lib/small/asxxxx/gb/gb.lib
+	LIBRARY C:\gbdk\lib/small/asxxxx/gb/gb.lib
 		MODULE set_xy_t.o
 USERBASEDEF
 	_CODE=0x0200
@@ -308,5 +306,3 @@ USERGLOBALDEF
 	.STACK=0xE000
 	.refresh_OAM=0xFF80
 	.init=0x0000
-
-?ASlink-Warning-Undefined Global rand referenced by module lcc1478080

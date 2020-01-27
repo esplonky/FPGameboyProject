@@ -1,10 +1,10 @@
 #include <stdio.h>
-// @ts-ignore
 #include <stdlib.h>
 #include <gb/gb.h>
 #include "sprites.c"
 #include "bgs.c"
 #include "GameCharacter.c"
+#include "rand.h"
 
 struct GameCharacter frogChar;
 struct GameCharacter pickleChar;
@@ -47,8 +47,7 @@ void setupPickle(){
 
 void setupFrog(){
 
-
-frogChar.x = rand();
+frogChar.x = 40;
 frogChar.y = 30;
 frogChar.width = 16;
 frogChar.height = 16;
@@ -66,16 +65,16 @@ movegamecharacter(&frogChar, frogChar.x, frogChar.y);
 }
 
 void main(){
-
-    //setupFrog();
+    set_sprite_data(0, 8, gameSprites);
     setupPickle();
-    set_sprite_data(0, 8, pickle);
+    setupFrog();
     set_bkg_data(0,4, bgTiles);
     set_bkg_tiles(0,0,20,18, playfield);
     SHOW_BKG;
     SHOW_SPRITES;
     DISPLAY_ON;
     while(1){
+
                 if(joypad() & J_LEFT){
                     pickleChar.x -= 2;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
