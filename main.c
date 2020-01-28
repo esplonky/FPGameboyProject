@@ -7,9 +7,9 @@
 
 struct GameCharacter frogChar;
 struct GameCharacter pickleChar;
-struct GameCharacter missileChar;
 UBYTE spritesize = 8;
 UINT8 lives = 4;
+UINT8 killCounter = 0;
 
 void performantdelay(UINT8 numloops){
     UINT8 i;
@@ -17,6 +17,11 @@ void performantdelay(UINT8 numloops){
         wait_vbl_done();
     }
 }
+
+/*UBYTE canplayermove(UINT8 playerx, UINT8 playery, struct GameCharacter* player){
+    UINT16 indexTLx, indexTLy, tileindexTL;
+    indexTLx = (playerx)
+}*/
 
 UBYTE checkcollisions(struct GameCharacter* one, struct GameCharacter* two){
  return(one->x >= two->x && one->x <= two->x + two->width) && (one->y >= two->y && one->y <= two->y + two->height) || (two->x >= one->x && two->x <= one->x + one->width) && (two->y >= one->y && two->y <= one->y + one->height);
@@ -48,15 +53,7 @@ void setupPickle(){
 }
 
 
-void setupMissile(){
-    missileChar.x += pickleChar.x;
-    missileChar.y += pickleChar.y;
-    pickleChar.width = 8;
-    pickleChar.height = 8;
-    set_sprite_tile(8,8);
-    pickleChar.spritids[0] = 8;
-    movegamecharacter(&missileChar, missileChar.x, missileChar.y);
-}
+
 
 
 void setupFrog(){
@@ -77,6 +74,7 @@ frogChar.spritids[3] = 7;
 movegamecharacter(&frogChar, frogChar.x, frogChar.y);
 
 }
+
 
 void main(){
     set_sprite_data(0, 8, sprites);
@@ -105,27 +103,41 @@ void main(){
                     pickleChar.y += 2;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
                 }
-                if(joypad() & J_A){
-                    missileChar.y += 3;
+               /*if(joypad() & J_A){
+                    missileChar.x = pickleChar.x;
+                    missileChar.y = pickleChar.y;
+                    while(missileChar.y >= 5){
+                        missileChar.y -= 1;
+                        movegamecharacter(&missileChar, missileChar.x, missileChar.y);
+                    }*/
                 }
-                movegamecharacter(&frogChar, frogChar.x, frogChar.y); 
-
+                
                 if(pickleChar.x >= frogChar.x){
                     frogChar.x += 1;
+                    movegamecharacter(&frogChar, frogChar.x, frogChar.y); 
+
                 }
                 else if(pickleChar.x <= frogChar.x){
                     frogChar.x -= 1;
+                    movegamecharacter(&frogChar, frogChar.x, frogChar.y); 
+
                 }
 
                 if (pickleChar.y <= 100){
-                    pickleChar.y = 101;
+                    pickleChar.y = 99;
                 }
 
                if(checkcollisions(&pickleChar, &frogChar)){
                     frogChar.y = 5;
                     lives -= 1;
+               }
+                if(checkcollisions(&frogChar, &missileChar)){
+                    frogChar.y = 5;
+                    missileChar.y = 200;
+                    missileChar.x = 200;
+                    killCounter +=1;
                 }
-
+                
                 frogChar.y += 3;
                 performantdelay(2);
             }   
