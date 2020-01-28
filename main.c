@@ -7,6 +7,7 @@
 
 struct GameCharacter frogChar;
 struct GameCharacter pickleChar;
+struct GameCharacter missileChar;
 UBYTE spritesize = 8;
 UINT8 lives = 4;
 
@@ -47,6 +48,17 @@ void setupPickle(){
 }
 
 
+void setupMissile(){
+    missileChar.x += pickleChar.x;
+    missileChar.y += pickleChar.y;
+    pickleChar.width = 8;
+    pickleChar.height = 8;
+    set_sprite_tile(8,8);
+    pickleChar.spritids[0] = 8;
+    movegamecharacter(&missileChar, missileChar.x, missileChar.y);
+}
+
+
 void setupFrog(){
 
 frogChar.x = pickleChar.x;
@@ -70,6 +82,7 @@ void main(){
     set_sprite_data(0, 8, sprites);
     setupPickle();
     setupFrog();
+    setupMissile();
     set_bkg_data(0,4, bgTiles);
     set_bkg_tiles(0,0,20,18, playfield);
     SHOW_BKG;
@@ -91,6 +104,9 @@ void main(){
                 if(joypad() & J_DOWN){
                     pickleChar.y += 2;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
+                }
+                if(joypad() & J_A){
+                    missileChar.y += 3;
                 }
                 movegamecharacter(&frogChar, frogChar.x, frogChar.y); 
 
@@ -114,9 +130,8 @@ void main(){
                 performantdelay(2);
             }   
 
-            frogChar.x = 150;
-            pickelChar.y = 150;
             printf("\n \n \n \n     GAME OVER!");
-    
+
+
     }
 
