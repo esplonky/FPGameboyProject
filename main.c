@@ -8,7 +8,7 @@
 struct GameCharacter frogChar;
 struct GameCharacter pickleChar;
 UBYTE spritesize = 8;
-UINT8 lives = 3;
+UINT8 lives = 4;
 
 void performantdelay(UINT8 numloops){
     UINT8 i;
@@ -18,7 +18,7 @@ void performantdelay(UINT8 numloops){
 }
 
 UBYTE checkcollisions(struct GameCharacter* one, struct GameCharacter* two){
-    return (one->x >= two->x && one->x <= two->x + two->width) && (one->x >= two->x && one->y <= two->x + two->height) || (two->x >= one->x && two->x <= one->x + one->width) && (two->x >= one->x && two->y <= one->x + one->height);
+ return(one->x >= two->x && one->x <= two->x + two->width) && (one->y >= two->y && one->y <= two->y + two->height) || (two->x >= one->x && two->x <= one->x + one->width) && (two->y >= one->y && two->y <= one->y + one->height);
 }
 
 void movegamecharacter(struct GameCharacter* character, UINT8 x, UINT8 y){
@@ -50,7 +50,7 @@ void setupPickle(){
 void setupFrog(){
 
 frogChar.x = pickleChar.x;
-frogChar.y = 30;
+frogChar.y = 5;
 frogChar.width = 16;
 frogChar.height = 16;
 
@@ -75,7 +75,7 @@ void main(){
     SHOW_BKG;
     SHOW_SPRITES;
     DISPLAY_ON;
-    while(!checkcollisions(&pickleChar, &frogChar)){
+    while(lives >= 2){
                 if(joypad() & J_LEFT){
                     pickleChar.x -= 2;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
@@ -105,16 +105,18 @@ void main(){
                     pickleChar.y = 101;
                 }
 
-               /* if(){
+               if(checkcollisions(&pickleChar, &frogChar)){
+                    frogChar.y = 5;
                     lives -= 1;
-                }*/
+                }
 
                 frogChar.y += 3;
                 performantdelay(2);
             }   
 
-             printf("GAME OVER!");  
-
+            frogChar.x = 150;
+            pickelChar.y = 150;
+            printf("\n \n \n \n     GAME OVER!");
     
     }
 

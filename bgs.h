@@ -3,6 +3,10 @@
 /* Start of tile array. */
 extern unsigned char bgTiles[];
 
+#define gameoverBank 0
+/* Start of tile array. */
+extern unsigned char gameover[];
+
 
 
 #define playfieldWidth 20
