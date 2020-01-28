@@ -4,11 +4,11 @@
 #include "sprites.c"
 #include "bgs.c"
 #include "GameCharacter.c"
-#include "rand.h"
 
 struct GameCharacter frogChar;
 struct GameCharacter pickleChar;
 UBYTE spritesize = 8;
+UINT8 lives = 3;
 
 void performantdelay(UINT8 numloops){
     UINT8 i;
@@ -17,7 +17,9 @@ void performantdelay(UINT8 numloops){
     }
 }
 
-
+UBYTE checkcollisions(struct GameCharacter* one, struct GameCharacter* two){
+    return (one->x >= two->x && one->x <= two->x + two->width) && (one->x >= two->x && one->y <= two->x + two->height) || (two->x >= one->x && two->x <= one->x + one->width) && (two->x >= one->x && two->y <= one->x + one->height);
+}
 
 void movegamecharacter(struct GameCharacter* character, UINT8 x, UINT8 y){
     move_sprite(character->spritids[0], x, y);
@@ -47,25 +49,25 @@ void setupPickle(){
 
 void setupFrog(){
 
-frogChar.x = 40;
+frogChar.x = pickleChar.x;
 frogChar.y = 30;
 frogChar.width = 16;
 frogChar.height = 16;
 
-set_sprite_tile(0,0);
-frogChar.spritids[0] = 0;
-set_sprite_tile(1,1);
-frogChar.spritids[1] = 1;
-set_sprite_tile(2,2);
-frogChar.spritids[2] = 2;
-set_sprite_tile(3,3);
-frogChar.spritids[3] = 3;
+set_sprite_tile(4,4);
+frogChar.spritids[0] = 4;
+set_sprite_tile(5,5);
+frogChar.spritids[1] = 5;
+set_sprite_tile(6,6);
+frogChar.spritids[2] = 6;
+set_sprite_tile(7,7);
+frogChar.spritids[3] = 7;
 movegamecharacter(&frogChar, frogChar.x, frogChar.y);
 
 }
 
 void main(){
-    set_sprite_data(0, 8, gameSprites);
+    set_sprite_data(0, 8, sprites);
     setupPickle();
     setupFrog();
     set_bkg_data(0,4, bgTiles);
@@ -73,8 +75,7 @@ void main(){
     SHOW_BKG;
     SHOW_SPRITES;
     DISPLAY_ON;
-    while(1){
-
+    while(!checkcollisions(&pickleChar, &frogChar)){
                 if(joypad() & J_LEFT){
                     pickleChar.x -= 2;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
@@ -94,16 +95,25 @@ void main(){
                 movegamecharacter(&frogChar, frogChar.x, frogChar.y); 
 
                 if(pickleChar.x >= frogChar.x){
-                    frogChar.x += 5;
+                    frogChar.x += 1;
                 }
-                if(pickleChar.x >= frogChar.x){
-                    frogChar.x -= 5;
+                else if(pickleChar.x <= frogChar.x){
+                    frogChar.x -= 1;
                 }
+
+                if (pickleChar.y <= 100){
+                    pickleChar.y = 101;
+                }
+
+               /* if(){
+                    lives -= 1;
+                }*/
+
                 frogChar.y += 3;
                 performantdelay(2);
             }   
 
-               
+             printf("GAME OVER!");  
 
     
     }
