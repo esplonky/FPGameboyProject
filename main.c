@@ -49,10 +49,10 @@ void setupPickle(){
 
 
 void setupMissile(){
-    missileChar.x += pickleChar.x;
-    missileChar.y += pickleChar.y;
-    pickleChar.width = 8;
-    pickleChar.height = 8;
+    //missileChar.x += pickleChar.x;
+    //missileChar.y += pickleChar.y;
+    missileChar.width = 8;
+    missileChar.height = 8;
     set_sprite_tile(8,8);
     pickleChar.spritids[0] = 8;
     movegamecharacter(&missileChar, missileChar.x, missileChar.y);
