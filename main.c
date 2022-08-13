@@ -80,7 +80,7 @@ void main(){
     set_sprite_data(0, 8, sprites);
     setupPickle();
     setupFrog();
-    setupMissile();
+    //setupMissile();
     set_bkg_data(0,4, bgTiles);
     set_bkg_tiles(0,0,20,18, playfield);
     SHOW_BKG;
@@ -88,19 +88,19 @@ void main(){
     DISPLAY_ON;
     while(lives >= 2){
                 if(joypad() & J_LEFT){
-                    pickleChar.x -= 2;
+                    pickleChar.x -= 1;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
                 }
                 if(joypad() & J_RIGHT){
-                    pickleChar.x += 2;
+                    pickleChar.x += 1;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
                 }
                 if(joypad() & J_UP){
-                    pickleChar.y -= 2;
+                    pickleChar.y -= 1;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
                 }
                 if(joypad() & J_DOWN){
-                    pickleChar.y += 2;
+                    pickleChar.y += 1;
                     movegamecharacter(&pickleChar, pickleChar.x, pickleChar.y);
                 }
                /*if(joypad() & J_A){
@@ -131,19 +131,17 @@ void main(){
                     frogChar.y = 5;
                     lives -= 1;
                }
-                if(checkcollisions(&frogChar, &missileChar)){
+              /*  if(checkcollisions(&frogChar, &missileChar)){
                     frogChar.y = 5;
                     missileChar.y = 200;
-                    missileChar.x = 200;
+                    //missileChar.x = 200;
                     killCounter +=1;
-                }
+                }*/
                 
                 frogChar.y += 3;
                 performantdelay(2);
             }   
 
-            printf("\n \n \n \n     GAME OVER!");
+            //printf("\n \n \n \n     GAME OVER!");
 
-
-    }
 

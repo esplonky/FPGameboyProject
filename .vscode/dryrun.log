@@ -1,0 +1,7 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/esplonky/Projects/FPGameboyProject'
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -c -o main.o main.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -o main.gb main.o
+rm main.o
+make: Leaving directory '/home/esplonky/Projects/FPGameboyProject'
+ 

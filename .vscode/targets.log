@@ -1,0 +1,573 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-redhat-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat Aug 13 00:04:36 2022
+
+# Variables
+
+ 
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/esplonky/.gtkrc:/home/esplonky/.config/gtkrc
+# environment
+MBK_IN_PH = ap
+# environment
+LMOD_SETTARG_FULL_SUPPORT = no
+# environment
+DREAL_TECHNO_NAME = /etc/alliance/cmos.dreal
+# environment
+VSCODE_CWD = /home/esplonky
+# environment
+GDM_LANG = en_US.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+LMOD_ROOT = /usr/share/lmod
+# environment
+define BASH_FUNC_which%%
+() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+endef
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+GDK_DPI_SCALE = 1
+# environment
+VH_PATSFX = pat
+# environment
+MBK_WORK_LIB = .
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/esplonky/Projects/FPGameboyProject
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XPAT_PARAM_NAME = /etc/alliance/xpat.par
+# environment
+HOSTNAME = fedora
+# environment
+MBK_CATAL_NAME = CATAL
+# environment
+MAIL = /var/spool/mail/esplonky
+# environment
+STEAM_FRAME_FORCE_CLOSE = 1
+# environment
+XDG_DATA_DIRS = /home/esplonky/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/esplonky/.config/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
+# environment
+SSH_ASKPASS = /usr/bin/ksshaskpass
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/xauth_TCaTIT
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
+# makefile
+MAKEFLAGS = pqrR
+# environment
+PLASMA_USE_QT_SCALING = 1
+# environment
+ELP_TECHNO_NAME = /etc/alliance/prol.elp
+# environment
+MBK_VSS = vss
+# environment
+VH_MAXERR = 10
+# environment
+XSCH_PARAM_NAME = /etc/alliance/xsch.par
+# environment
+VH_DLYSFX = dly
+# makefile
+CURDIR := /home/esplonky/Projects/FPGameboyProject
+# environment
+define BASH_FUNC_module%%
+() {  _mlshopt="f";
+ case "$-" in 
+ *f*)
+ unset _mlshopt
+ ;;
+ esac;
+ if [ -n "${_mlshopt:-}" ]; then
+ set -$_mlshopt;
+ fi;
+ eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh);
+ if [ -n "${_mlshopt:-}" ]; then
+ set +$_mlshopt;
+ fi;
+ unset _mlshopt
+}
+endef
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LMOD_DIR = /usr/share/lmod/lmod/libexec
+# environment
+LESSOPEN = ||/usr/bin/lesspipe.sh %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MBK_TARGET_LIB = /usr/share/alliance/cells/sxlib
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/ssh-agent.socket
+# default
+.SHELLFLAGS := -c
+# environment
+MBK_CATA_LIB = .:/usr/share/alliance/cells/sxlib:/usr/share/alliance/cells/dp_sxlib:/usr/share/alliance/cells/rflib:/usr/share/alliance/cells/rf2lib:/usr/share/alliance/cells/ramlib:/usr/share/alliance/cells/romlib:/usr/share/alliance/cells/pxlib
+# environment
+WAYLAND_DISPLAY = wayland-0
+# environment
+HISTSIZE = 1000
+# environment
+XDG_CONFIG_DIRS = /home/esplonky/.config/kdedefaults:/etc/xdg:/usr/share/kde-settings/kde-profile/default/xdg
+# environment
+TPD_LOCAL = /home/esplonky
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = breeze_cursors
+# environment
+XDG_SESSION_DESKTOP = plasma
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+MBK_IN_LO = vst
+# environment
+VSCODE_PID = 29038
+# environment
+SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
+# environment
+XDG_SESSION_TYPE = wayland
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+GDK_CORE_DEVICE_EVENTS = 1
+# environment
+RDS_OUT = cif
+# environment
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1707,unix/unix:/tmp/.ICE-unix/1707
+# automatic
+*F = $(notdir $*)
+# environment
+MANPATH = /usr/share/lmod/lmod/share/man:
+# environment
+MODULEPATH = /etc/modulefiles:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+XFSM_PARAM_NAME = /etc/alliance/xfsm.par
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+define BASH_FUNC_ml%%
+() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+endef
+# environment
+MBK_OUT_LO = vst
+# default
+MAKE_HOST := x86_64-redhat-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/esplonky/.cargo/bin:/home/esplonky/.local/bin:/home/esplonky/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/libexec/sdcc
+# environment
+MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
+# default
+MAKEFILES := 
+# environment
+MODULESHOME = /usr/share/lmod/lmod
+# automatic
+^F = $(notdir $^)
+# environment
+LMOD_sys = Linux
+# environment
+INVOCATION_ID = a28f0d2db08640a3afc75ac4762abf59
+# environment
+VH_BEHSFX = vbe
+# environment
+RDS_IN = cif
+# environment
+USERNAME = esplonky
+# environment
+MBK_C4_LIB = ./cellsC4
+# environment
+GDK_SCALE = 1
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# environment
+XDG_SEAT = seat0
+# environment
+GTK_IM_MODULE = ibus:xim
+# environment
+RDS_TECHNO_NAME = /etc/alliance/cmos.rds
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# environment
+KDEDIRS = /usr
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 6)
+OTHER = sound.gb 
+# environment
+LOGNAME = esplonky
+# environment
+MBK_VDD = vdd
+# environment
+BASH_ENV = /usr/share/lmod/lmod/init/bash
+# environment
+XDG_VTNR = 2
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1717
+# environment
+MODULEPATH_ROOT = /usr/share/modulefiles
+# environment
+HISTCONTROL = ignoredups
+# environment
+EDITOR = /usr/bin/nano
+# environment
+DISPLAY = :0
+# environment
+USER = esplonky
+# default
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# environment
+MBK_SCALE_X = 100
+# environment
+MANAGERPID = 1496
+# environment
+QT_WAYLAND_FORCE_DPI = 96
+# environment
+which_declare = declare -f
+# environment
+DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
+# environment
+XKB_DEFAULT_LAYOUT = us
+# environment
+CVS_RSH = ssh
+# environment
+_ = /usr/bin/make
+# environment
+MBK_SPI_MODEL = /etc/alliance/spimodel.cfg
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GRAAL_TECHNO_NAME = /etc/alliance/cmos.graal
+# environment
+JOURNAL_STREAM = 8:28578
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/esplonky/.gtkrc-2.0:/home/esplonky/.gtkrc-2.0-kde4:/home/esplonky/.config/gtkrc-2.0
+# environment
+HOME = /home/esplonky
+# environment
+QT_IM_MODULE = ibus
+# environment
+TPD_GLOBAL = /usr/share/toped/
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-41487b2b-1.70.0-main.sock
+# environment
+XDG_SESSION_ID = 2
+# environment
+GENVIEW_TECHNO_NAME = /etc/alliance/cmos.genview
+# environment
+MBK_OUT_PH = ap
+# environment
+XCURSOR_SIZE = 24
+# environment
+GBDKPATH = /bin/gbdk/
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+ALLIANCE_TOP = /usr/lib64/alliance
+# environment
+LMOD_PKG = /usr/share/lmod/lmod
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# makefile (from 'Makefile', line 1)
+CC = /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j
+# environment
+KDE_FULL_SESSION = true
+# environment
+XDG_MENU_PREFIX = kf5-
+# environment
+LMOD_VERSION = 8.6.11
+# environment
+GDMSESSION = plasma
+# variable set hash-table stats:
+# Load=162/1024=16%, Rehash=0, Collisions=8/196=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2058, inode 6690490): 25 files, no impossibilities.
+
+# 25 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  recipe to execute (from 'Makefile', line 15):
+	$(CC) -c -o $@ $<
+
+%.s: %.c
+#  recipe to execute (from 'Makefile', line 18):
+	$(CC) -S -o $@ $<
+
+%.o: %.s
+#  recipe to execute (from 'Makefile', line 21):
+	$(CC) -c -o $@ $<
+
+%.gb: %.o
+ 
+#  recipe to execute (from 'Makefile', line 24):
+	$(CC) -o $@ $<
+
+# 4 implicit rules, 0 (0.0%) terminal.
+# Files
+
+main.gb: main.o
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  recipe to execute (from 'Makefile', line 24):
+	$(CC) -o $@ $<
+
+bank_1.o: bank_1.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 43):
+	$(CC) -Wf-bo1 -Wf-ba1 -c -o $@ $<
+
+# Not a target:
+banks.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 00:03:13.591084603
+#  File has been updated.
+#  Successfully updated.
+
+bank_2.o: bank_2.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 50):
+	$(CC) -Wf-bo2 -Wf-ba2 -c -o $@ $<
+
+bank_0.o: bank_0.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 36):
+	$(CC) -Wf-ba0 -c -o $@ $<
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 27):
+	rm -f *.o *.lst *.map *.gb *~ *.rel *.cdb *.ihx *.lnk *.sym *.asm
+
+# Not a target:
+ram_fn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bank_1.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bank_3.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: main.gb
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 00:03:04.456879294
+#  File has been updated.
+#  Successfully updated.
+
+make.bat: Makefile
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 11):
+	echo "REM Automatically generated from Makefile" > make.bat
+	make -sn | sed y/\\//\\\\/ | grep -v make >> make.bat
+
+main.o: main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File is an intermediate prerequisite.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main.o
+# automatic
+# * := main
+# automatic
+# < := main.c
+# automatic
+# + := main.c
+# automatic
+# % := 
+# automatic
+# ^ := main.c
+# automatic
+# ? := main.c
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/14=14%
+#  recipe to execute (from 'Makefile', line 15):
+	$(CC) -c -o $@ $<
+
+# Not a target:
+bank_0.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ram_fn.gb: ram_fn.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 71):
+	$(CC) -Wl-g_inc_ram=0xD000 -Wl-g_inc_hiram=0xFFA0 -o $@ ram_fn.o
+
+bank_3.o: bank_3.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 57):
+	$(CC) -Wf-bo3 -Wf-ba3 -c -o $@ $<
+
+banks.gb: banks.o bank_0.o bank_1.o bank_2.o bank_3.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 65):
+	$(CC) -Wl-yt2 -Wl-yo4 -Wl-ya4 -o $@ banks.o bank_0.o bank_1.o bank_2.o bank_3.o
+
+# Not a target:
+bank_2.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=0/52=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 51 / storage = 440 B / avg = 8 B
+# current buf: size = 8162 B / used = 440 B / count = 51 / avg = 8 B
+
+# strcache performance: lookups = 79 / hit rate = 35%
+# hash-table stats:
+# Load=51/8192=1%, Rehash=0, Collisions=1/79=1%
+# Finished Make data base on Sat Aug 13 00:04:36 2022
+
+ 

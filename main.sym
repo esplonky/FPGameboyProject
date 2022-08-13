@@ -1,275 +1,54 @@
-; no$gmb format .sym file
-; Generated automagically by ASxxxx linker V01.75 (SDK 3.0.0)
-; Area: .  .ABS.
-00:0000 s__HEADER
-00:0000 .init
-00:0000 s__SFR
-00:0200 s__CODE
-00:0FE1 s__HOME
-00:1490 s__BASE
-00:2522 s__LIT
-00:2522 s__GSINIT
-01:57A1 s__GSINITTAIL
-01:57A2 s__GSFINAL
-00:C000 .OAM
-00:C0A0 s__DATA
-00:C923 s__BSS
-00:C9AA s__HEAP
-00:C9AA s__BSEG
-00:C9AA s__ISEG
-00:C9AA s__XSEG
-00:C9AA s__OVERLAY
-00:E000 .STACK
-00:FF80 .refresh_OAM
-; Area: _CODE
-00:0200 _performantdelay
-00:0214 _checkcollisions
-00:038E _movegamecharacter
-00:0418 _setupPickle
-00:04AB _setupMissile
-00:0505 _setupFrog
-00:05A3 _main
-00:0870 _putchar
-00:0879 _setchar
-00:0882 _gotoxy
-00:088D _posx
-00:089E _posy
-00:08AF .adv_gcurs
-00:08CC .circle
-00:096F .horlin
-00:09A7 .verlin
-00:0A03 .circplot
-00:0A81 .box
-00:0B57 .line
-00:0C78 .xonly
-00:0DC7 .yonly
-00:0DE8 .plot
-00:0E05 .wrbyte
-00:0E87 .getpix
-00:0EBC .wrtchr
-00:0F20 _gotogxy
-00:0F2B _wrtchr
-00:0F40 _getpix
-00:0F4C _color
-00:0F5B _circle
-00:0F75 _box
-00:0F99 _line
-00:0FB1 _plot_point
-00:0FC5 _plot
-; Area: _HEADER
-00:01D2 _exit
-; Area: _HOME
-00:0FE1 .set_mode
-00:0FF1 .remove_VBL
-00:0FF7 .remove_LCD
-00:0FFD .remove_TIM
-00:1003 .remove_SIO
-00:1009 .remove_JOY
-00:100F .add_VBL
-00:1015 .add_LCD
-00:101B .add_TIM
-00:1021 .add_SIO
-00:1027 .add_JOY
-00:102D .remove_int
-00:104D .add_int
-00:1069 .wait_vbl_done
-00:1069 _wait_vbl_done
-00:1080 _display_off
-00:1080 .display_off
-00:10A1 .serial_IO
-00:10D0 _mode
-00:10D9 _get_mode
-00:10DE _enable_interrupts
-00:10E0 _disable_interrupts
-00:10E2 _reset
-00:10E2 .reset
-00:10E8 _set_interrupts
-00:10F3 _remove_VBL
-00:10FE _remove_LCD
-00:1109 _remove_TIM
-00:1114 _remove_SIO
-00:111F _remove_JOY
-00:112A _add_VBL
-00:1135 _add_LCD
-00:1140 _add_TIM
-00:114B _add_SIO
-00:1156 _add_JOY
-00:1161 _clock
-00:116A __printTStates
-00:116B banked_call
-00:1184 banked_ret
-00:118D _printf
-00:11BC _sprintf
-; Area: _BASE
-00:1490 .mv_sprite
-00:149F _move_sprite
-00:14AC _set_win_data
-00:14AC _set_bkg_data
-00:14F9 _set_sprite_data
-00:1528 .padup
-00:1528 _waitpadup
-00:1538 .jpad
-00:1565 .wait_pad
-00:156C _joypad
-00:1571 _waitpad
-00:157B .set_sprite_tile
-00:1588 _set_sprite_tile
-00:1593 __modslong
-00:1593 __divslong
-00:1593 __mulslong
-00:1594 __divschar
-00:15A0 __modschar
-00:15AB __divsint
-00:15BC __modsint
-00:15CB __divuchar
-00:15D7 __moduchar
-00:15E2 __divuint
-00:15F3 __moduint
-00:1602 .mod8
-00:1602 .div8
-00:160A .mod16
-00:160A .div16
-00:1640 .modu8
-00:1640 .divu8
-00:1643 .modu16
-00:1643 .divu16
-00:1680 .copy_vram
-00:168F _get_data
-00:168F _set_data
-00:16A2 _set_bkg_tiles
-00:16B6 font_copy_uncompressed
-00:16EC font_copy_compressed
-00:1741 font_load
-00:1789 font_copy_current
-00:17D1 font_set
-00:17DE .put_char
-00:17F7 .out_char
-00:17FE .del_char
-00:1859 _font_load
-00:1867 _font_set
-00:1876 _font_init
-00:1898 _cls
-00:1898 .cls
-00:18CA .cr_curs
-00:18DF .adv_curs
-00:193B .tmode
-00:1964 .tmode_out
-00:1974 _font_load_ibm_fixed
-00:197B _font_ibm_fixed
-00:1A7D _font_ibm_fixed_tiles
-00:227D .gmode
-00:22DF .vbl
-00:22EA .lcd
-00:22F7 .draw_image
-00:2301 .switch_data
-00:2338 _switch_data
-00:2353 _draw_image
-00:2366 .y_table
-00:2486 .set_xy_wtt
-00:2497 .set_xy_btt
-00:24A6 .set_xy_tt
-00:24D7 _set_tiles
-00:24F0 .init_vram
-00:24FE .init_wtt
-00:250E .init_btt
-00:251C .init_tt
-; Area: _LIT
-; Area: _GSINIT
-00:2522 gsinit
-; Area: _GSINITTAIL
-; Area: _GSFINAL
-; Area: _DATA
-00:C0A0 _sprites
-00:C120 _bgTiles
-00:C160 _playfield
-00:C2C8 _gameoverTiles
-00:C908 _frogChar
-00:C910 _pickleChar
-00:C918 _missileChar
-00:C920 _spritesize
-00:C921 _lives
-00:C922 _killCounter
-; Area: _BSS
-00:C923 __cpu
-00:C924 .mode
-00:C925 __io_out
-00:C926 __io_in
-00:C927 __io_status
-00:C928 .vbl_done
-00:C929 __current_bank
-00:C92A _sys_time
-00:C92A .sys_time
-00:C92C .int_0x40
-00:C93C .int_0x48
-00:C94C .int_0x50
-00:C95C .int_0x58
-00:C96C .int_0x60
-00:C97F font_current
-00:C982 font_first_free_tile
-00:C983 font_table
-00:C995 .curx
-00:C996 .cury
-00:C997 .fg_colour
-00:C998 .bg_colour
-; Area: _HEAP
-00:C9AA _malloc_heap_start
-; Area: _OVERLAY
-; Area: _ISEG
-; Area: _BSEG
-; Area: _XSEG
-; Area: _SFR
-00:FF00 _P1_REG
-00:FF01 _SB_REG
-00:FF02 _SC_REG
-00:FF04 _DIV_REG
-00:FF05 _TIMA_REG
-00:FF06 _TMA_REG
-00:FF07 _TAC_REG
-00:FF0F _IF_REG
-00:FF10 _NR10_REG
-00:FF11 _NR11_REG
-00:FF12 _NR12_REG
-00:FF13 _NR13_REG
-00:FF14 _NR14_REG
-00:FF16 _NR21_REG
-00:FF17 _NR22_REG
-00:FF18 _NR23_REG
-00:FF19 _NR24_REG
-00:FF1A _NR30_REG
-00:FF1B _NR31_REG
-00:FF1C _NR32_REG
-00:FF1D _NR33_REG
-00:FF1E _NR34_REG
-00:FF20 _NR41_REG
-00:FF21 _NR42_REG
-00:FF22 _NR43_REG
-00:FF23 _NR44_REG
-00:FF24 _NR50_REG
-00:FF25 _NR51_REG
-00:FF26 _NR52_REG
-00:FF40 _LCDC_REG
-00:FF41 _STAT_REG
-00:FF42 _SCY_REG
-00:FF43 _SCX_REG
-00:FF44 _LY_REG
-00:FF45 _LYC_REG
-00:FF46 _DMA_REG
-00:FF47 _BGP_REG
-00:FF48 _OBP0_REG
-00:FF49 _OBP1_REG
-00:FF4A _WY_REG
-00:FF4B _WX_REG
-00:FF4D _KEY1_REG
-00:FF4F _VBK_REG
-00:FF51 _HDMA1_REG
-00:FF52 _HDMA2_REG
-00:FF53 _HDMA3_REG
-00:FF54 _HDMA4_REG
-00:FF55 _HDMA5_REG
-00:FF56 _RP_REG
-00:FF68 _BCPS_REG
-00:FF69 _BCPD_REG
-00:FF6A _OCPS_REG
-00:FF6B _OCPD_REG
-00:FF70 _SVBK_REG
-00:FFFF _IE_REG
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 1.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000000 L
+    _LCDC_REG                                                      ****** GX
+  7 __xinit__bgTiles                                               000080 R
+  7 __xinit__gameoverTiles                                         000228 R
+  7 __xinit__killCounter                                           00086A R
+  7 __xinit__lives                                                 000869 R
+  7 __xinit__playfield                                             0000C0 R
+  7 __xinit__sprites                                               000000 R
+  7 __xinit__spritesize                                            000868 R
+  2 _bgTiles                                                       000080 GR
+  0 _checkcollisions                                               00000D GR
+  1 _frogChar                                                      000000 GR
+  2 _gameoverTiles                                                 000228 GR
+    _joypad                                                        ****** GX
+  2 _killCounter                                                   00086A GR
+  2 _lives                                                         000869 GR
+  0 _main                                                          0002C7 GR
+  0 _movegamecharacter                                             0001A5 GR
+  0 _performantdelay                                               000000 GR
+  1 _pickleChar                                                    000008 GR
+  2 _playfield                                                     0000C0 GR
+    _set_bkg_data                                                  ****** GX
+    _set_bkg_tiles                                                 ****** GX
+    _set_sprite_data                                               ****** GX
+  0 _setupFrog                                                     000277 GR
+  0 _setupPickle                                                   000229 GR
+    _shadow_OAM                                                    ****** GX
+  2 _sprites                                                       000000 GR
+  2 _spritesize                                                    000868 GR
+    _wait_vbl_done                                                 ****** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size    424   flags    0
+   1 _DATA                                      size     10   flags    0
+   2 _INITIALIZED                               size    86B   flags    0
+   3 _DABS                                      size      0   flags    8
+   4 _HOME                                      size      0   flags    0
+   5 _GSINIT                                    size      0   flags    0
+   6 _GSFINAL                                   size      0   flags    0
+   7 _INITIALIZER                               size    86B   flags    0
+   8 _CABS                                      size      0   flags    8
+
